@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<models packageName="com.test">
+	<model className="User" tableName="users">
+		<property name="username" type="String" label="用户名" required="true"/>
+		<property name="password" type="String" label="密码" required="true"/>
+		<property name="email" type="String" label="电子邮箱" required="true"/>
+		<property name="enabled" type="boolean" label="激活"/>
+		<property name="birthDate" type="Date" label="生日"/>
+		<property name="createTime" type="Date" label="创建时间" notInUI="true"/>
+		<property name="loginTimes" type="int" label="登录次数" notInUI="true"/>
+	</model>
+	<model className="Group" tableName="groups">
+		<property name="name" type="String" label="组名"/>
+		<property name="enabled" type="boolean" label="是否可用"/>
+		<oneToMany name="users" type="User"/>
+	</model>
+	<model className="Article">
+		<property name="title" type="String" label="标题"/>
+		<property name="content" type="String" label="内容"/>
+		<manyToOne name="user" type="User"/>
+	</model>
+	<model className="Role" tableName="roles">
+		<property name="name" type="String" label="角色名字"/>
+		<manyToMany name="users" type="User"/>
+	</model>
+</models>

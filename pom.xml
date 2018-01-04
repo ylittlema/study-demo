@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.yjn</groupId>
+  <artifactId>study-demo</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>study-demo</name>
+  <url>http://maven.apache.org</url>
+
+<modules>
+  <module>auto-db-transform</module>
+<module>code-gen</module>
+<module>code-gen-by-mybatis</module>
+<module>hadoop-demo</module>
+<module>java-project</module>
+<module>kafka-demo</module>
+<module>lucene-demo</module>
+<module>redis-read-data</module>
+<module>spring-demo</module>
+<module>springboot-demo</module>
+</modules>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+  </dependencies>
+</project>
